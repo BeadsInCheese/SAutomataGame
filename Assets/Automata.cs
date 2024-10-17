@@ -9,7 +9,6 @@ public class Automata : MonoBehaviour
     // Start is called before the first frame update
     public List<State> states= new List<State>();
     public GameObject statePrefab;
-    public Automata solution;
     void Start()
     {
         
@@ -102,7 +101,12 @@ public class Automata : MonoBehaviour
         }
         return accepted;
     }
-    IEnumerator runSlowly(List<int> word) {
+    public GameObject box;
+    public IEnumerator runSlowly(List<int> word) {
+        var x=Instantiate(box);
+        x.GetComponent<Stamps>().createStamps(word);
+        
+        Debug.Log("what");
         foreach (int letter in word)
         {
             foreach (State state in states)

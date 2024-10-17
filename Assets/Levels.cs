@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelInfo : MonoBehaviour
+[CreateAssetMenu (menuName ="Level")]
+public class Levels : ScriptableObject
 {
-    // Start is called before the first frame update
+    public Automata solution;
     public string levelName;
-    public string description;
+    public string levelDescription;
     public int alfabetlargestNumber = 2;
 }
