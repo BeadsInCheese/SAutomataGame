@@ -11,7 +11,7 @@ public class Stamps : MonoBehaviour
         for (int i = 0; i < colors.Count; i++)
         {
             var x = Instantiate(stampPrefab);
-            x.transform.position = stampTransform.position+new Vector3(0,i*0.1f,0);
+            x.transform.position = stampTransform.position+new Vector3(0,i*0.3f,0);
             x.transform.rotation = stampTransform.rotation;
         }
     }

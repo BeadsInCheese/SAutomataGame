@@ -105,7 +105,7 @@ public class Automata : MonoBehaviour
     public IEnumerator runSlowly(List<int> word) {
         var x=Instantiate(box);
         x.GetComponent<Stamps>().createStamps(word);
-        
+        x.transform.rotation=Quaternion.Euler(0f, 90f, 0f);
         Debug.Log("what");
         foreach (int letter in word)
         {
